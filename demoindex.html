@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            padding: 5% 30%;
+        }
+    .inputForm{
+
+        padding: 10px 25px;
+        width: auto;
+      
+        border: 2px solid #121b3d;
+
+    }
+
+    .inputForm:focus{
+        box-shadow: inset 0px 1px 1px rgba(255,255,255,1);
+        border: 2px solid #121b3d;
+    }
+
+    label{
+        padding: 10px; 
+        color: #ff8000;
+        font-size: 12px;
+
+    }
+
+    .submit{
+
+        color: white;
+        background-color: #ff8000;
+        padding: 10px 30px;
+        width: 220px;
+        border-radius: 30px;
+        margin: 12px auto;
+        box-shadow: inset 0px 1px 1px rgba(255,255,255,1);
+        border-color: #121b3d;;
+        border-style: none;
+    }
+
+    @media only screen and (max-device-width: 480px) {
+        body{
+            padding: 0;
+        }
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Medical Inventory Form
+    </h1>
+
+    <form class="" method="post" action="/meds/app" style="display: flex; justify-content: center; flex-direction: column;">
+    <label for="medName">Name of Medicine :-</label><br>
+    <input name="medName" type="text" class="inputForm" id="medName" placeholder="Please Enter the Name of the Medicine" >
+    <br><label for="medName">Medicine Count :-</label><br>
+    <input name="count" type="text" class="inputForm" id="count" placeholder="Please Enter the Count of Medicine (mg)" >
+    <br><label for="medName">Brand of Medicine :-</label><br>
+    <input name="brandName" type="text" class="inputForm" id="brandName" placeholder="Please Enter the Brand Name of Medicine" >
+
+    <button class="submit" type="submit">Submit >></button>
+    </form>
+    
+</body>
+</html>
