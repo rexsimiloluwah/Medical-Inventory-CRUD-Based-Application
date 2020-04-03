@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        th{
+            box-shadow: 0px 1px 1px rgba(255,255,255,1);
+        }
+
+        body{
+            background: url("../assets/img/44fb924d6e2ad5815409b9e2e4f4c21a.jpg");
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <section class="header" style="margin-top: 30px;">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+    <h1 style="color: #121b3d; font-size: 50px;">Medical Inventory</h1>
+    <hr style="background-color:  #ff8000;margin-left: 30px;width: 200px; height: 2px;">
+    </div>
+    </div></div>
+    </section>
+
+    <section class="medTable">
+        <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+
+    <table class="table table-striped">
+    <tr>
+        <thead class="thead thead-dark">
+        
+        <th scope="col">Medicine ID</th>
+        <th scope="col">Medicine Name</th>
+        <th scope="col">Count (mg)</th>
+        <th scope="col">Medicine Brand</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+       
+        </thead>
+     </tr>
+        {{#rows}}
+    <tr>
+        <td>{{mid}}</td>
+        <td style="font-weight: bold;">{{name}}</td>
+        <td>{{count}}</td>
+        <td>{{brandname}}</td>
+        <td>
+        <form action="/meds/delete/{{mid}}" method="post">
+            <button class="btn btn-danger" style="padding: 5px 10px; border-radius: 30px;" type="submit"> Delete X </button>
+        </form>
+        </td>
+
+        <td><a style="color: green" href="/meds/edit/{{mid}}">Edit</a> </td>
+    </tr>
+
+
+        {{/rows}}
+
+</table>
+</div></div></div></section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+</body>
+</html>

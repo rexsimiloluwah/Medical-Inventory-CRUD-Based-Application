@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .inputForm{
+
+        padding: 10px 25px;
+        width: auto;
+      
+        border: 2px solid #121b3d;
+        margin: 5px;
+
+    }
+
+    .inputForm:focus{
+        box-shadow: inset 0px 1px 1px rgba(255,255,255,1);
+        border: 2px solid #121b3d;
+    }
+
+    label{
+        padding: 10px; 
+        color: #ff8000;
+        font-size: 12px;
+
+    }
+
+    .submit{
+
+        color: white;
+        background-color: #ff8000;
+        padding: 10px 30px;
+        width: 220px;
+        border-radius: 30px;
+        margin: 12px auto;
+        box-shadow: inset 0px 1px 1px rgba(255,255,255,1);
+        border-color: #121b3d;;
+        border-style: none;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>This is the Edit form for the Inventory
+    </h1>
+
+    <form action="/meds/edit/{{med.mid}}" method="post">
+
+        <label class="label"> Name of Medicine :-</label>
+        <input class="inputForm" type="text" value="{{med.name}}" placeholder="" class="" name="medName"><br>
+        <label class="label"> Count (mg) :-</label>
+        <input  class="inputForm" type="number" value="{{med.count}}" placeholder="" class="" name="medCount"><br>
+        <label class="label"> Brand Name :-</label>
+        <input  class="inputForm" type="text" value="{{med.brandname}}" placeholder="" class="" name="brandName"><br>
+        
+       <button class="submit" type="submit"> Update </button>
+    </form>
+    
+</body>
+</html>
