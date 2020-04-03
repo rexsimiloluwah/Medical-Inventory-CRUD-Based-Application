@@ -1,5 +1,0 @@
->> Create the server.js file for the project (We are using express for our templating engine)
-
->> Setup the static files for the project - HTML file ( add static files into the public folder)
-
->>  
